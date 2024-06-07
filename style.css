@@ -1,0 +1,238 @@
+:root{
+    --primary-color:#a855f7;
+    --primary-color-dark:#9333ea;
+    --secondary-color:#ca8a04;
+    --text-dark:#1f2937;
+    --text-light:#6b7280;
+    --extra-light:#faf5ff;
+    --max-width:1200px;
+} 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-family: sans-serif;
+}
+nav{
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color: cornflowerblue;
+    z-index:99;
+}
+.nav_content{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav.logo a{
+    font-weight: 800;
+    color:var(--primary-color);
+    transition: .3s;
+    
+}
+nav .logo a:hover{
+    color:var(--primary-color);
+    font-style: italic;
+    font-size: large;
+}
+nav .checkbox{
+    display: none;
+}
+nav input{
+    display: none;
+}
+nav .checkbox i{
+     font-size: 2rem;
+     color: var(--primary-color);
+     cursor: pointer;
+}
+ul{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.3s;
+}
+ul li a{
+    padding: .5rem 1rem;
+    border:2px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: 0.3s;
+}
+ul li a:hover{
+    border-top-color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+    color: brown;
+}
+.section{
+    background-color: var(--extra-light);
+}
+.section_container{
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 4rem;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.subtitle{
+    letter-spacing: 2px;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+.title{
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+.title span{
+    font-weight: 600;
+}
+.description{
+    line-height: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+.icon{
+    margin-top: 8rem;
+    border-radius: 100px;
+}
+@media (width<750px) {
+    nav.checkbox{
+        display: block;
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh-85px);
+        left: -100px;
+        top: 85px;
+        background-color: var(--extra-light);
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+    nav #check:checked~ul{
+        left: 0;
+    }
+    ul li a{
+        font-size: 1.25rem;
+    }
+    
+}
+#about{
+    min-height: 90vh;
+    padding: 50px;
+    background-color:#faf5ff;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.column1{
+    flex-basis: 35%;
+}
+.column1 img{
+    border-radius: 50px;
+    margin-left: 10px;
+    margin-top: 9rem;
+    
+}
+.column2{
+    flex-basis: 60%;
+}
+.font{
+    font-size: 60px;
+    font-weight: 600;
+    padding-top: 7rem;
+}
+.aboutme{
+    line-height: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    padding-top: 3rem;
+    word-spacing: 5px;
+    margin-left: 3rem;
+
+}
+#skill{
+    min-height: 90vh;
+    background-color: #faf5ff;
+    display: flex;
+
+}
+.skillfont{
+    font-size: 60px;
+    font-weight: 600;
+    padding-top: 7rem;
+    margin-left: 8rem;
+}
+.skillset{
+    line-height:2rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    padding-top: 15rem;
+    word-spacing: 5px;
+    list-style: disc;
+    font-size: large;
+}
+.skilllogo{
+    margin-top: 9rem;
+    margin-left: 25rem;
+    border-radius: 100px;
+    height: 50vh;
+    width: 50vh;
+}
+#projects{
+    min-height: 90vh;
+    background-color: #faf5ff;
+    display: flex;
+}
+.projectfont{
+    font-size: 60px;
+    font-weight: 600;
+    padding-top: 7rem;
+    margin-left: 20rem;
+}
+.projectset{
+    line-height:2rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    padding-top: 15rem;
+    word-spacing: 5px;
+    list-style: disc;
+    font-size: large;
+    margin-right: 5rem;
+}
+.projectlogo{
+    margin-top: 9rem;
+    margin-left: 5rem;
+    border-radius: 100px;
+    height: 50vh;
+    width: 50vh;
+}
+
+
+
+
+
